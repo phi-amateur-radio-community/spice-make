@@ -1,1 +1,1 @@
-# spice-make
+# SPICE Make
