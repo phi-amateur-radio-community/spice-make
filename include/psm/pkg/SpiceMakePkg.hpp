@@ -3,7 +3,7 @@
 // Licensed under the GNU General Public License Version 3.0 or later
 // https://github.com/phi-amateur-radio-community/spice-make
 // =====================================================================
-// Path /src/pkg/SpiceMakePkg.cpp
+// Path /include/psm/pkg/SpiceMakePkg.cpp
 // Header file of SpiceMake library file handler.
 
 #pragma once
