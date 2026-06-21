@@ -52,3 +52,8 @@ This document describes the syntax and semantics of the SPICE Package file forma
 
 - **Module N Checksum:** `SHA-256` checksum of the module data.
 - **Module N Data:** The ZIP-compressed module data.
+
+---
+
+**Copyright (c) 2026 Phiarc Teams.**  
+**This document adopts the [Creative Commons Attribution-ShareAlike 4.0 Unported](https://creativecommons.org/licenses/by-sa/4.0/).**
