@@ -7,3 +7,11 @@
 // Checksum calculator
 
 #include <psm/util/Checksum.hpp>
+
+uint32_t crc32(const uint8_t* data, const size_t length) {
+    uint32_t crc = 0xFFFFFFFF;
+    for (size_t i = 0; i < length; i++) {
+        crc = crc ^ CRC32_TABLE[data[i]];
+    }
+    return crc;
+}
