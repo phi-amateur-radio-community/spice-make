@@ -7,3 +7,13 @@
 // SpiceMake library file handler.
 
 #include <psm/pkg/SpiceMakePkg.hpp>
+#include <psm/util/Checksum.hpp>
+
+SpiceMakePkgModule::SpiceMakePkgModule(uint8_t *offset, const size_t length) {
+    offset_ = offset;
+    length_ = length;
+}
+
+bool SpiceMakePkgModule::checksum(const uint32_t crc) const {
+    return crc32(offset_, length_) == crc;
+}

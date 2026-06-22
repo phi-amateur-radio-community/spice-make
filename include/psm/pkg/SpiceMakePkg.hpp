@@ -7,3 +7,27 @@
 // Header file of SpiceMake library file handler.
 
 #pragma once
+
+#include <cstdint>
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+
+using namespace std;
+
+class SpiceMakePkgModule {
+    uint8_t* offset_;
+    size_t length_;
+    string version_;
+public:
+    SpiceMakePkgModule(uint8_t* offset, size_t length);
+    [[nodiscard]] bool checksum(uint32_t crc) const;
+};
+
+class SpiceMakePkg {
+    unordered_map<string, SpiceMakePkgModule> modules_;
+    vector<uint8_t> data_;
+    string metadata_;
+public:
+    SpiceMakePkg(vector<uint8_t> data);
+};
