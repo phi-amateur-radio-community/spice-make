@@ -50,7 +50,7 @@ This document describes the syntax and semantics of the SPICE Package file forma
 
 > **Note** No newline characters `\n` are allowed.
 
-- **Module N Checksum:** `SHA-256` checksum of the module data.
+- **Module N Checksum:** `CRC32` checksum of the module data.
 - **Module N Version:** The version of the module, such as `1.0.1`. (Must consist only of number `0-9` and `.`)
 - **Module N Data:** The zstd-compressed module data.
 
