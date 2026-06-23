@@ -9,8 +9,8 @@ This document describes the syntax and semantics of the SPICE Package file forma
 ## Structure
 
 ```text
-[File Header]<\n>
-[Index List]<\n>
+[File Header]
+[Index List]
 [Data List]
 ```
 
@@ -18,7 +18,7 @@ This document describes the syntax and semantics of the SPICE Package file forma
 
 ```text
 [Index List Offset]<SP>[Index List Length]<\n>
-[Information]
+[Information]<\n>
 ```
 
 > **Note** Only ASCII characters are allowed in this section.
@@ -30,10 +30,10 @@ This document describes the syntax and semantics of the SPICE Package file forma
 ### Index List
 
 ```text
-[Module Name 1]:[Module Index 1];<\n>
-[Module Name 2]:[Module Index 2];<\n>
+[Module Name 1]:[Module Index 1]<\n>
+[Module Name 2]:[Module Index 2]<\n>
 ......
-[Module Name N]:[Module Index N];
+[Module Name N]:[Module Index N]<\n>
 ```
 
 - **Module Name N:** Name of the module. (Must consist only of lowercase letters `a-z` and `-`)
