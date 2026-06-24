@@ -16,18 +16,23 @@
 using namespace std;
 
 class SpiceMakePkgModule {
-    uint8_t* offset_;
-    size_t length_;
-    string version_;
-public:
-    SpiceMakePkgModule(uint8_t* offset, size_t length);
+    const streamsize offset_;
+    const size_t length_;
+    string version_{};
+    vector<uint8_t> data_;
+    bool is_version_loaded_{false};
+    bool is_data_loaded_{false};
     [[nodiscard]] bool checksum(uint32_t crc) const;
+public:
+    SpiceMakePkgModule(streamsize offset, size_t length);
+    [[nodiscard]] streamsize getOffset() const;
+    [[nodiscard]] size_t getLength() const;
+    void loadVersion(string version);
+    vector<uint8_t>& loadData();
 };
 
 class SpiceMakePkg {
     unordered_map<string, SpiceMakePkgModule> modules_;
-    vector<uint8_t> data_;
-    string metadata_;
 public:
-    SpiceMakePkg(vector<uint8_t> data);
+    explicit SpiceMakePkg(unordered_map<string, SpiceMakePkgModule> modules);
 };
