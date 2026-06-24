@@ -40,3 +40,11 @@ vector<uint8_t> SpiceMakePkgModule::decompress() const {
     ZSTD_decompress(decompressed.data(), decompressed.size(), data_.data(), data_.size());
     return decompressed;
 }
+
+SpiceMakePkg::SpiceMakePkg(unordered_map<string, SpiceMakePkgModule> modules) {
+    modules_ = std::move(modules);
+}
+
+SpiceMakePkgModule SpiceMakePkg::getModule(const string& name) {
+    return modules_.at(name);
+}

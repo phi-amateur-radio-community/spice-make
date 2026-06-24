@@ -36,4 +36,5 @@ class SpiceMakePkg {
     unordered_map<string, SpiceMakePkgModule> modules_;
 public:
     explicit SpiceMakePkg(unordered_map<string, SpiceMakePkgModule> modules);
+    SpiceMakePkgModule getModule(const string& name);
 };
