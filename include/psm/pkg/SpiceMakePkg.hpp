@@ -30,6 +30,7 @@ public:
     void loadVersion(string version);
     vector<uint8_t>& loadData();
     [[nodiscard]] vector<uint8_t> decompress() const;
+    [[nodiscard]] string& getVersion();
 };
 
 class SpiceMakePkg {

@@ -37,8 +37,14 @@ vector<uint8_t>& SpiceMakePkgModule::loadData() {
 
 vector<uint8_t> SpiceMakePkgModule::decompress() const {
     vector<uint8_t> decompressed;
-    ZSTD_decompress(decompressed.data(), decompressed.size(), data_.data(), data_.size());
+    if (is_data_loaded_) {
+        ZSTD_decompress(decompressed.data(), decompressed.size(), data_.data(), data_.size());
+    }
     return decompressed;
+}
+
+string& SpiceMakePkgModule::getVersion() {
+    return version_;
 }
 
 SpiceMakePkg::SpiceMakePkg(unordered_map<string, SpiceMakePkgModule> modules) {
