@@ -9,6 +9,7 @@
 #include <psm/pkg/SpiceMakePkg.hpp>
 #include <psm/util/Checksum.hpp>
 #include <utility>
+#include <zstd.h>
 
 SpiceMakePkgModule::SpiceMakePkgModule(const streamsize offset, const size_t length) : offset_(offset), length_(length) {}
 
@@ -32,4 +33,10 @@ void SpiceMakePkgModule::loadVersion(string version) {
 vector<uint8_t>& SpiceMakePkgModule::loadData() {
     is_data_loaded_ = true;
     return data_;
+}
+
+vector<uint8_t> SpiceMakePkgModule::decompress() const {
+    vector<uint8_t> decompressed;
+    ZSTD_decompress(decompressed.data(), decompressed.size(), data_.data(), data_.size());
+    return decompressed;
 }

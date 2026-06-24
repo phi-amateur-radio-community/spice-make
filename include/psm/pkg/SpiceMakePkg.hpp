@@ -29,6 +29,7 @@ public:
     [[nodiscard]] bool checksum(uint32_t crc) const;
     void loadVersion(string version);
     vector<uint8_t>& loadData();
+    [[nodiscard]] vector<uint8_t> decompress() const;
 };
 
 class SpiceMakePkg {
