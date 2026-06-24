@@ -12,7 +12,6 @@
 #include <cstdint>
 #include <string_view>
 #include <vector>
-#include <bits/locale_facets_nonio.h>
 
 using namespace std;
 
