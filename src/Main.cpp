@@ -6,6 +6,10 @@
 // Path /src/Main.cpp
 // Main of SpiceMake.
 
-int main() {
+#include <CLI/CLI.hpp>
+
+int main(const int argc, char* argv[]) {
+    CLI::App app{"SPICE Make"};
+    CLI11_PARSE(app, argc, argv);
     return 0;
 }
