@@ -14,6 +14,6 @@ class PkgGenerator {
 public:
     virtual ~PkgGenerator() = default;
     virtual SpiceMakePkg getSpiceMakePkg();
-    virtual uint32_t loadSpiceMakePkgModule(SpiceMakePkgModule module);
+    virtual bool loadSpiceMakePkgModule(SpiceMakePkgModule module);
     virtual uint32_t loadSpiceMakePkgModuleVersion(SpiceMakePkgModule module);
 };

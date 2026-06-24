@@ -22,11 +22,11 @@ class SpiceMakePkgModule {
     vector<uint8_t> data_;
     bool is_version_loaded_{false};
     bool is_data_loaded_{false};
-    [[nodiscard]] bool checksum(uint32_t crc) const;
 public:
     SpiceMakePkgModule(streamsize offset, size_t length);
     [[nodiscard]] streamsize getOffset() const;
     [[nodiscard]] size_t getLength() const;
+    [[nodiscard]] bool checksum(uint32_t crc) const;
     void loadVersion(string version);
     vector<uint8_t>& loadData();
 };

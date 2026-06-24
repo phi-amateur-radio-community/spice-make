@@ -52,12 +52,12 @@ SpiceMakePkg SpiceMakePkgFile::getSpiceMakePkg() {
     return SpiceMakePkg(modules);
 }
 
-uint32_t SpiceMakePkgFile::loadSpiceMakePkgModule(SpiceMakePkgModule module) {
+bool SpiceMakePkgFile::loadSpiceMakePkgModule(SpiceMakePkgModule module) {
     const uint32_t module_checksum = loadSpiceMakePkgModuleVersion(module);
     auto data = module.loadData();
     data.resize(module.getLength());
     readBits(file_, data);
-    return module_checksum;
+    return module.checksum(module_checksum);
 }
 
 uint32_t SpiceMakePkgFile::loadSpiceMakePkgModuleVersion(SpiceMakePkgModule module) {

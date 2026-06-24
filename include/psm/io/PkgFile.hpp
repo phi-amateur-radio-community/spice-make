@@ -22,6 +22,6 @@ public:
     explicit SpiceMakePkgFile(const string& file_name);
     string getInformation();
     SpiceMakePkg getSpiceMakePkg() override;
-    uint32_t loadSpiceMakePkgModule(SpiceMakePkgModule module) override;
+    bool loadSpiceMakePkgModule(SpiceMakePkgModule module) override;
     uint32_t loadSpiceMakePkgModuleVersion(SpiceMakePkgModule module) override;
 };
