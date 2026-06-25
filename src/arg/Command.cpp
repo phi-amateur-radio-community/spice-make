@@ -8,15 +8,25 @@
 
 #include <psm/arg/Command.hpp>
 
+#include <Metadata.hpp>
 #include <CLI/CLI.hpp>
+
+using namespace std;
 
 int command(const int argc, char *argv[]) {
     CLI::App app{"SPICE Make"};
+
+    app.set_version_flag(
+        "-v,--version",
+        string("SpiceMake ") + SPICEMAKE_VERSION
+    );
+
     app.footer(
     R"(Copyright (c) 2026 Phiarc Team
     License: GNU General Public License Version 3 or later
     https://github.com/phi-amateur-radio-community/spice-make
     )");
+
     CLI11_PARSE(app, argc, argv);
     return 0;
 }
