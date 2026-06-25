@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD 20)
 include(cmake/Deps.cmake)
 configure_file(
         cmake/Metadata.hpp.in
-        ${CMAKE_CURRENT_BINARY_DIR}/generated/Metadata.hpp
+        ${CMAKE_BINARY_DIR}/generated/Metadata.hpp
         @ONLY
 )
 
