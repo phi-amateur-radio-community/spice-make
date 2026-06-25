@@ -3,12 +3,9 @@
 // Licensed under the GNU General Public License Version 3.0 or later
 // https://github.com/phi-amateur-radio-community/spice-make
 // =====================================================================
-// Path /src/Main.cpp
-// Main of SpiceMake.
+// Path /include/psm/arg/Command.hpp
+// Header file of command handler.
 
-#include <psm/arg/Command.hpp>
+#pragma once
 
-int main(const int argc, char* argv[]) {
-    command(argc, argv);
-    return 0;
-}
+int command(int argc, char* argv[]);

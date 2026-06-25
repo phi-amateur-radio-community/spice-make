@@ -20,4 +20,4 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(CLI11)
 
 add_library(SpiceMakeDeps INTERFACE)
-target_link_libraries(SpiceMakeDeps INTERFACE zstd CLI11)
+target_link_libraries(SpiceMakeDeps INTERFACE zstd CLI11::CLI11)
