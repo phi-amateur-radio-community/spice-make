@@ -4,7 +4,7 @@
 
 ## Overview
 
-This document is the definition for Spice Make Project
+This document is the definition for source directory of the Spice Make Project
 
 ## Structure
 

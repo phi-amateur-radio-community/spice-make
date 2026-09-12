@@ -1,10 +1,10 @@
-# SPICE Make Project File
+# SPICE Make Project File (Out)
 
 > **Last Edit: 2026-09-12**
 
 ## Overview
 
-This document is the definition for Spice Make Project
+This document is the definition for out directory of the Spice Make Project
 
 ## Structure
 
@@ -50,7 +50,7 @@ This directory is used to store the SPICE source code of dependence.
 ### `src`
 
 This directory is used to store the SPICE source code of project.
-That is the compiling products of [Spice Make Source File](/docs/project/source.md).
+That is the compiling products of [Spice Make Source File](./source.md).
 
 ### `remote`
 

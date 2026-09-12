@@ -82,13 +82,13 @@ For details, please refer to [command](/docs/project/command/list.md).
 
 This directory is used to store the source code of the Spice Make.
 
-For details, please refer to [source](/docs/project/source.md).
+For details, please refer to [source](./source.md).
 
 ### `out`
 
 This directory is used to store the compiled products of the Spice Make.
 
-For details, please refer to [out](/docs/project/out.md).
+For details, please refer to [out](./out.md).
 
 ---
 
