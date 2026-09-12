@@ -36,12 +36,12 @@ and the **name** is `mmm`
 and the **version** is `vvv`.
 These modules must be introduced in `link_include_local` or `link_include_remote` at `project.smake`.
 
-This command will be replaced by `.import aaa-mmm-vvv` when Spice Make is compiled.
+This command will be unzipped to `./aaa-mmm-vvv` when Spice Make is compiled.
 
 ### `#include <nnn> form <aaa:mmm@vvv>`
 
 Similar to the previous one,
-but command will be replaced by `.import nnn` instead of `.import aaa-mmm-vvv`.
+but command will be unzipped to `./nnn` instead of `./aaa-mmm-vvv`.
 
 ---
 
