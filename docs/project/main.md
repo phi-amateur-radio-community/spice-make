@@ -1,6 +1,7 @@
 # SPICE Make Project File
 
-> **Last Edit: 2026-09-12**
+> **Last Edit: 2026-09-13**  
+> **Spice Make Version: 1.0.0-alpha**
 
 ## Overview
 
